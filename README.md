@@ -1,10 +1,18 @@
 MAZE Game
 ==========
 
-> Yuseok Jung
-> Maze Game using Data Structure Content
-> Made in 2018.06.03
+> ###### Yuseok Jung
+> ###### Maze Game using Data Structure Content
+> ###### Made in 2018.06.03
 -------------------------------------
+> game을 compile 후 실행시키면, 미로의 사이즈(높이, 폭)와 perfect maze/ imperfect maze를 입력합니다. 
+> 키보드 상하좌우 방향키로 경로를 그리며 미로 게임을 진행합니다. 
+> f(F)를 누르면 경로를 찾아 화면에 표시합니다. 
+> q(Q)를 누르면 게임을 종료합니다.
+
+----------------------------------------
+----------------------------------------
+
 * maze\_project.c
     - makefile의 용법을 잘 모를 때 처음으로 작성했던 원본 파일
     - 필요한 모든 code가 포함된 하나의 file
@@ -24,6 +32,8 @@ MAZE Game
 * buildMaze.c
     - Eller's Algorithm을 이용해 perfect maze를 build 합니다.
     - 만들어진 perfect maze를 활용해 imperfect maze를 build 했습니다.
+        + 이 때 만들어진 maze가 room(square 모양)을 만들지 않도록 고려했습니다.
+        + ~~시간복잡도는 infinity. but not such that case~~
 
 * DFSSearch.c
 
