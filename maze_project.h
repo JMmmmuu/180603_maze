@@ -31,7 +31,7 @@ int HEIGHT, WIDTH;
 int** maze;
 int** mark;
 int count;
-offsets mv[MAX_DIR_SIZE] = { { -1,0 },{ 0,1 }, { 1,0 }, { 0,-1 } }; // clockwise from N
+//offsets mv[MAX_DIR_SIZE];// = { { -1,0 },{ 0,1 }, { 1,0 }, { 0,-1 } }; // clockwise from N
 element* stck;
 int top;
 nptr pHeader;

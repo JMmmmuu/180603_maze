@@ -13,6 +13,7 @@ void findPath(){
     for(i=0;i<HEIGHT;i++) mark[i] = (int*)calloc(WIDTH, sizeof(int));
     mark[1][1] = 1; top = 0;
     stck[0].row = 1; stck[0].col = 1; stck[0].dir = 1;
+    offsets mv[MAX_DIR_SIZE] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};    // clockwise from N
 
     while (top>-1 && !found) {
         position = pop();
