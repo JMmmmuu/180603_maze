@@ -33,7 +33,7 @@ MAZE Game
     - Eller's Algorithm을 이용해 perfect maze를 build 합니다.
     - 만들어진 perfect maze를 활용해 imperfect maze를 build 했습니다.
         + 이 때 만들어진 maze가 room(square 모양)을 만들지 않도록 고려했습니다.
-        + ~~시간복잡도는 infinity. but not such that case ~.~~~
+        + ~~시간복잡도는 infinity. but not such that case~~
 
 * DFSSearch.c
     - DFS Search Algorithm을 이용해 미로의 경로를 탐색합니다.
