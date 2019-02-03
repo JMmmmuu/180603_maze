@@ -36,7 +36,7 @@ void findPath(){
     }
     //mvprintw(START_ROW+HEIGHT+1, START_COL, "%d %d", nextRow, nextCol);
     if( found ) {
-        nptr ptmp;
+        nptr ptmp=popCursor();
         for(;pHeader;ptmp=popCursor()) {
             mvprintw(START_ROW+ptmp->row, START_COL+ptmp->col, " ");
         }
