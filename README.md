@@ -5,10 +5,10 @@ MAZE Game
 > ###### Maze Game using Data Structure Content
 > ###### Made in 2018.06.03
 -------------------------------------
-> game을 compile 후 실행시키면, 미로의 사이즈(높이, 폭)와 perfect maze/ imperfect maze를 입력합니다. 
-> 키보드 상하좌우 방향키로 경로를 그리며 미로 게임을 진행합니다. 
-> f(F)를 누르면 경로를 찾아 화면에 표시합니다. 
-> q(Q)를 누르면 게임을 종료합니다.
+> game을 compile 후 실행시키면, 미로의 사이즈(높이, 폭)와 perfect maze/ imperfect maze를 입력합니다.  
+> 키보드 상하좌우 방향키로 경로를 그리며 미로 게임을 진행합니다.  
+> f(F)를 누르면 경로를 찾아 화면에 표시합니다.  
+> q(Q)를 누르면 게임을 종료합니다.  
 
 ----------------------------------------
 ----------------------------------------
@@ -33,11 +33,19 @@ MAZE Game
     - Eller's Algorithm을 이용해 perfect maze를 build 합니다.
     - 만들어진 perfect maze를 활용해 imperfect maze를 build 했습니다.
         + 이 때 만들어진 maze가 room(square 모양)을 만들지 않도록 고려했습니다.
-        + ~~시간복잡도는 infinity. but not such that case~~
+        + ~~시간복잡도는 infinity. but not such that case ~.~~~
 
 * DFSSearch.c
+    - DFS Search Algorithm을 이용해 미로의 경로를 탐색합니다.
+    - 탐색 방향은 북, 동, 남, 서 방향 순
+    - ncurses library의 attron(A\_REVERSE) 속성을 이용해 경로를 표시했습니다.
 
 * cursor.c
+    - 지나온 경로는 STACK에 저장했습니다.
+    - 지나온 경로를 다시 돌아갈 때, 갈림길에서 다른 경로로 들어갈 때, 옳바른게 속성을 표시하도록 고려했습니다.
 
 * makefile
-
+    - 분할할 파일을 하나의 실행 파일로 compile 합니다.
+    - maze\_project.c 파일을 제외한 모든 파일을 compile 합니다.
+    - -Wall -W -g -lncurses 옵션을 붙였습니다.
+    - make clean으로 생성된 object file들을 모두 삭제합니다.
